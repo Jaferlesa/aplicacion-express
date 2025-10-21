@@ -9,8 +9,6 @@ const SERVER_URL = 'https://spicy-sides-lick.loca.lt/';
 const App = () => {
   // Estado para guardar el texto del input
   const [todo, setTodo] = useState('');
-  // Estado para mostrar un indicador de carga mientras se envía la petición
-  const [cargando, setCargando] = useState(false);
 
   // --- d) Función que llama al servidor con la dirección del túnel ---
   const agregarTodo = async () => {
@@ -19,9 +17,6 @@ const App = () => {
       Alert.alert("Error", "Por favor, escribe una tarea.");
       return;
     }
-
-    // Activamos el indicador de carga
-    setCargando(true);
 
     try {
       // Usamos fetch para enviar la petición POST
@@ -68,21 +63,12 @@ const App = () => {
         onChangeText={setTodo}
       />
 
-      {/* Usamos un Pressable para poder deshabilitarlo mientras carga */}
       <Pressable
         style={({ pressed }) => [
-          styles.button,
-          (cargando || !todo.trim()) && styles.buttonDisabled, // Estilo deshabilitado
-          pressed && !cargando && { opacity: 0.8 }
-        ]}
+          styles.button]}
         onPress={agregarTodo}
-        disabled={cargando || !todo.trim()} // Deshabilitamos el botón
       >
-        {cargando ? (
-          <ActivityIndicator color="#fff" />
-        ) : (
-          <Text style={styles.buttonText}>Agregar Tarea</Text>
-        )}
+      <Text style={styles.buttonText}>Agregar Tarea</Text>
       </Pressable>
     </View>
   );
@@ -115,9 +101,6 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 8,
     alignItems: 'center',
-  },
-  buttonDisabled: {
-    backgroundColor: '#a0a0a0',
   },
   buttonText: {
     color: 'white',
