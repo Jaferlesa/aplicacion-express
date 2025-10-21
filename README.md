@@ -32,6 +32,9 @@ Para interactuar con la base de datos SQLite desde CodeSpace, sigan estos pasos:
 2. Inicien una sesión de SQLite con el archivo de base de datos:
    ```
    sqlite3 base.sqlite3
+
+
+   curl https://loca.lt/mytunnelpassword
    ```
 
 3. Para ver el esquema de la tabla "todos":
