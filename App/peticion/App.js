@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { View, StyleSheet, TextInput, Alert, Pressable, Text, ActivityIndicator } from 'react-native';
 
 // --- ¡IMPORTANTE! REEMPLAZA ESTA URL ---
-// Pega aquí la dirección "Forwarded Address" de tu CodeSpace.
-// Asegúrate de que termine con una barra si la copiaste sin ella.
 const SERVER_URL = 'https://spicy-sides-lick.loca.lt/';
 
 const App = () => {
