@@ -35,6 +35,7 @@ Para interactuar con la base de datos SQLite desde CodeSpace, sigan estos pasos:
 
 
    curl https://loca.lt/mytunnelpassword
+   172.182.200.128
    ```
 
 3. Para ver el esquema de la tabla "todos":

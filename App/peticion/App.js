@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, TextInput, Alert, Pressable, Text, ActivityIndicator } from 'react-native';
 
 // --- ¡IMPORTANTE! REEMPLAZA ESTA URL ---
-const SERVER_URL = 'https://spicy-sides-lick.loca.lt/';
+const SERVER_URL = 'https://plain-shrimps-lead.loca.lt/';
 
 const App = () => {
   // Estado para guardar el texto del input
